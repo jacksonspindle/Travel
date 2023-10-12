@@ -18,15 +18,8 @@ import checkIcon from "./images/checkIcon.png";
 import aiIcon from "./images/aiIcon.png";
 // eslint-disable-next-line
 import Chat from "./components/Chat";
-import { login, logout, authStateChange, auth, db } from "./firebase";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  query,
-  where,
-  getDocs,
-} from "firebase/firestore";
+import { login, auth, db } from "./firebase";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
 const World = () => {
   const globeEl = useRef();
