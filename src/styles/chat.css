@@ -1,0 +1,152 @@
+.message-list {
+    background-color: transparent !important;
+    margin-top: .5rem;
+    height: calc(100% - 50px);
+overflow-y: auto;
+    /* opacity: 0; */
+}
+
+.cs-main-container,
+.main-container {
+    width: 100%;
+    overflow-y: scroll;
+    border: none !important;
+    background-color: rgba(178, 141, 255, .0) !important;
+    /* border-radius: 1rem; */
+    /* padding-top: .5rem; */
+    /* border-radius: 10px 10px 0px 0px; */
+    /* border: 2px solid #ABC4FF; */
+    /* border-bottom: none; */
+
+}
+
+.main-container,
+.chat-container {
+    height: 100%;
+    /* Ensure they take the full height */
+    max-height: none !important;
+    /* Remove the max-height restriction */
+    overflow-y: hidden;
+    /* Hide the overflow so there's no double scrollbar */
+}
+
+.cs-message__content {
+    background-color: rgba(0, 0, 0, .3) !important;
+    font-family: oatmeal-pro-regular !important;
+        border-top-left-radius: .6rem !important;
+            border-bottom-left-radius: .6rem !important;
+            color: white !important;
+}
+
+.cs-message--outgoing .cs-message__content {
+    background-color: rgba(255, 255, 255, .2) !important;
+    border-top-right-radius: .6rem !important;
+    border-bottom-right-radius: .6rem !important;
+}
+
+.chat-container {
+    background-color: rgba(178, 141, 255, 0) !important;
+    /* background-color: red !important; */
+    /* background-color: rgba(255, 255, 255, .3) !important; */
+    /* opacity: .4; */
+
+}
+
+.cs-typing-indicator {
+    background-color: transparent !important;
+}
+
+.cs-message-input {
+    /* background-color: transparent !important; */
+    color: black !important;
+    border: none !important;
+    position: fixed !important;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent !important;
+    padding: 0 !important;
+    /* border: 1px solid white; */
+    /* border-radius: 0; */
+    /* border-top-right-radius: none !important; */
+}
+
+.cs-message-input__content-editor-wrapper {
+    /* border-top-right-radius: none !important; */
+    /* border-top-left-radius: .7rem; */
+    /* border-top-right-radius: none !important; */
+    border: none !important;
+    /* border-radius: 0px 0px 10px 10px; */
+    background-color: rgb(51, 51, 51) !important;
+    /* background-color:  rgba(255, 255, 255, .1) !important;; */
+    border: 2px solid #ABC4FF;
+    border-top: none;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+
+}
+
+
+.cs-message-input__content-editor{
+    background-color: rgb(51, 51, 51) !important;
+    color: white !important;
+    font-family: oatmeal-pro-regular !important;
+    /* padding: 2rem 0 2rem 0;     */
+    font-size: 20px !important;
+}
+.cs-message-input__content-editor::placeholder {
+    color: white !important;
+}
+
+.cs-message-input__content-editor input {
+    color: white !important;
+    background-color: red !important;
+    font-family: oatmeal-pro-regular !important;
+}
+
+.cs-message-input__content-editor-wrapper::placeholder {
+    /* color: white !important; */
+}
+
+.cs-message-input__content-editor-container{
+    /* background-color: white !important; */
+}
+
+
+.ps__rail-y {
+    background-color: transparent !important;
+}
+
+.ps__thumb-y {
+    background-color: #ABC4FF;
+}
+
+.ai-container {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.cs-message-input__content-editor-container  input::placeholder {
+    color: white !important;
+}
+
+input::placeholder {
+    color: white !important;
+}
+
+.cs-message-input__content-editor[data-placeholder]:empty:before {
+    color: white !important;
+    font-family: oatmeal-pro-bold !important;
+
+}
+
+.cs-message-input__content-editor[data-placeholder]:after {
+    color: white !important;
+    font-family: oatmeal-pro-bold !important;
+    height: 2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px !important;
+
+}

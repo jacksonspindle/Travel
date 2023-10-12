@@ -1,0 +1,18 @@
+@font-face {
+  font-family: oatmeal-pro-bold;
+  src: url(../public/OatmealProTRIAL-Bold.otf);
+}
+
+@font-face {
+  font-family: oatmeal-pro-regular;
+  src: url(../public/OatmealProTRIAL-Regular.otf);
+}
+
+@font-face {
+  font-family: oatmeal-pro-thin;
+  src: url(../public/OatmealProTRIAL-Light.otf);
+}
+
+body {
+  font-family: oatmeal-pro-regular;
+}
