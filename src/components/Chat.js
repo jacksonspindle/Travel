@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import {
   MainContainer,
   ChatContainer,
@@ -12,6 +12,7 @@ import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 
 const Chat = ({ inputText, setInputText, selectedCountry }) => {
   const [typing, setTyping] = useState(false);
+  // eslint-disable-next-line
   const [dalleImage, setDalleImage] = useState("");
   const [messages, setMessages] = useState([
     {

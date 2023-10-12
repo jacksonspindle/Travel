@@ -4,6 +4,7 @@ import "./App.css";
 import data from "./data/ne_110m_admin_0_countries.geojson";
 import * as d3 from "d3";
 import map from "./images/map.jpg";
+// eslint-disable-next-line
 import { motion, AnimatePresence, useDragControls } from "framer-motion";
 import axios from "axios";
 import "../src/styles/globe.css";
@@ -14,7 +15,7 @@ import planeIcon from "./images/planeIcon.png";
 import profileIcon from "./images/profileIcon.png";
 import helpIcon from "./images/helpIcon.png";
 import aiIcon from "./images/aiIcon.png";
-
+// eslint-disable-next-line
 import Chat from "./components/Chat";
 
 const World = () => {
@@ -46,6 +47,7 @@ const World = () => {
   const getVal = (feat) =>
     feat.properties.GDP_MD_EST / Math.max(1e5, feat.properties.POP_EST);
 
+  // eslint-disable-next-line
   const maxVal = useMemo(
     () => Math.max(...countries.features.map(getVal)),
     [countries]
