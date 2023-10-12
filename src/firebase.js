@@ -1,11 +1,16 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
+
+import {
+  getAuth,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAqIN39P1MnRcKaTLyUDM8Q8_PaD3Otozo",
   authDomain: "travel-ec723.firebaseapp.com",
@@ -19,3 +24,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+let db;
+let auth;
+
+try {
+  auth = getAuth(app);
+  db = getFirestore(app);
+} catch (error) {
+  console.error("Error initializing Firebase services:", error);
+}
+
+// const auth = getAuth(app);
+
+export const login = async () => {
+  const provider = new GoogleAuthProvider();
+  try {
+    await signInWithPopup(auth, provider);
+  } catch (error) {
+    console.error("Failed to login", error);
+  }
+};
+
+export const logout = () => {
+  signOut(auth);
+};
+
+export const authStateChange = (callback) => {
+  return onAuthStateChanged(auth, callback);
+};
+
+export { auth, db };
